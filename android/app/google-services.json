@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "543850658021",
+    "firebase_url": "https://animal-crossing-wiki.firebaseio.com",
+    "project_id": "animal-crossing-wiki",
+    "storage_bucket": "animal-crossing-wiki.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543850658021:android:bcd8bcaca72b21a67b7c0c",
+        "android_client_info": {
+          "package_name": "com.alex.animalcrossingwiki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543850658021-3haopsrktl4gf5ss6v0c0sp96mhvbgbn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjyO5SMFRb2Pr4tQ-O7tJ2Uf2MfSFVP5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543850658021-3haopsrktl4gf5ss6v0c0sp96mhvbgbn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
