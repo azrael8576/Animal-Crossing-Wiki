@@ -2,7 +2,9 @@ import 'dart:convert';
 
 import 'package:animalcrossingwiki/model/animal.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 
+import '../constant.dart';
 import 'home_page_body.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,7 +13,7 @@ class HomePage extends StatelessWidget {
     return new Scaffold(
       body: new Column(
         children: <Widget>[
-          new GradientAppBar("小動物"),
+          new GradientAppBar("小動物", null, (){Logger().e('安安');}, null,),
           new HomePageBody(),
         ],
       ),
@@ -21,9 +23,12 @@ class HomePage extends StatelessWidget {
 
 class GradientAppBar extends StatelessWidget {
   final String title;
+  final Widget child;
+  final Function onPressed;
+  final Function onTitleTapped;
   final double barHeight = 66.0;
 
-  GradientAppBar(this.title);
+  GradientAppBar(@required this.title, this.child, this.onPressed, this.onTitleTapped);
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +37,19 @@ class GradientAppBar extends StatelessWidget {
     return new Container(
       padding: new EdgeInsets.only(top: statusBarHeight),
       height: statusBarHeight + barHeight,
-      child: new Center(
-        child: new Text(
-          title,
-          style: const TextStyle(
-              color: Colors.white,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w600,
-              fontSize: 36.0),
+      child:  Hero(
+        tag: 'topBarBtn',
+        child: Card(
+          elevation: 10,
+          shape: kBackButtonShape,
+          child: MaterialButton(
+            height: 50,
+            minWidth: 50,
+            elevation: 10,
+            shape: kBackButtonShape,
+            onPressed: onPressed,
+            child: child,
+          ),
         ),
       ),
       decoration: new BoxDecoration(
