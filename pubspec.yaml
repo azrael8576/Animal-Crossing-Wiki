@@ -97,3 +97,7 @@ flutter:
     - assets/img/ic_gravity.png
     - assets/img/animal_back.png
     - assets/row/animal.json
+    - assets/row/artwork.json
+    - assets/row/bug.json
+    - assets/row/fish.json
+    - assets/row/fossil.json
